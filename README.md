@@ -18,3 +18,15 @@ Before running the container, you need to set up an X server ([VcXsrv](https://s
     ```bash
     source /opt/ros/noetic/setup.bash
     ```
+
+
+# Start the Container
+1. Open a terminal in the root of this repository
+1. Run the following command to start the container:
+    ```bash
+    docker-compose up -d
+    ```
+1. Enter the container:
+    ```bash
+    docker exec -it ros_noetic bash
+    ```
