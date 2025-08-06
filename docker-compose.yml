@@ -1,0 +1,14 @@
+services:
+  ros_noetic:
+    build:
+      context: .           # Path to where your Dockerfile is
+      dockerfile: Dockerfile  # Optional if the file is named 'Dockerfile'
+    image: ros-noetic-windows  # Tag to give the built image
+    container_name: ros_noetic
+    stdin_open: true
+    tty: true
+    environment:
+      - DISPLAY=host.docker.internal:0.0
+    volumes:
+      - .:/root/workspace
+    network_mode: bridge
